@@ -1,77 +1,75 @@
-:root {
-  --moyo-blue: #0072ce;
-  --text-color: #1d1d1d;
-  --link-height: 56px;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html,
 body {
   margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: Roboto, sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  color: var(--text-color);
 }
 
 .moyo-header {
-  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 0 24px;
-  background-color: #fff;
+  align-items: center;
+  padding: 0 50px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.moyo-header-logo {
+.moyo-header-logo-link {
   display: block;
   width: 40px;
   height: 40px;
 }
 
-.moyo-header-nav {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
+.moyo-header-logo {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
-.moyo-header-nav li + li {
-  margin-left: 32px;
+.moyo-header-nav {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.moyo-header-nav li {
+  margin-left: 20px;
+}
+
+.moyo-header-nav li:first-child {
+  margin-left: 0;
 }
 
 .moyo-header-link {
   position: relative;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  height: var(--link-height);
-  text-transform: uppercase;
+  height: 60px;
+  /* stylelint-disable font-family-name-quotes */
+  font-family: 'Roboto', sans-serif;
+  /* stylelint-enable font-family-name-quotes */
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
   text-decoration: none;
-  color: var(--text-color);
-  font-size: 13px;
-  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #000;
+  transition: color 0.3s;
 }
 
-.moyo-header-link:hover,
+.moyo-header-link:hover {
+  color: #00acdc;
+}
+
 .moyo-header-link.is-active {
-  color: var(--moyo-blue);
+  color: #00acdc;
 }
 
 .moyo-header-link.is-active::after {
   content: '';
   position: absolute;
+  bottom: 0;
   left: 0;
   right: 0;
-  bottom: 0;
   height: 4px;
-  background-color: var(--moyo-blue);
+  border-radius: 2px;
+  background-color: #00acdc;
 }
