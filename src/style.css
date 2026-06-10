@@ -1,3 +1,7 @@
+:root {
+  --moyo-blue: #00acdc;
+}
+
 body {
   margin: 0;
 }
@@ -30,11 +34,11 @@ body {
   list-style: none;
 }
 
-.moyo-header-nav li {
+.moyo-header-nav__item {
   margin-left: 20px;
 }
 
-.moyo-header-nav li:first-child {
+.moyo-header-nav__item:first-child {
   margin-left: 0;
 }
 
@@ -56,11 +60,11 @@ body {
 }
 
 .moyo-header-link:hover {
-  color: #00acdc;
+  color: var(--moyo-blue);
 }
 
 .moyo-header-link.is-active {
-  color: #00acdc;
+  color: var(--moyo-blue);
 }
 
 .moyo-header-link.is-active::after {
@@ -71,5 +75,5 @@ body {
   right: 0;
   height: 4px;
   border-radius: 2px;
-  background-color: #00acdc;
+  background-color: var(--moyo-blue);
 }
